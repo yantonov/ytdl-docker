@@ -23,7 +23,6 @@ run:
 			-i -t \
 			--name "$(CONTAINER_NAME)" \
 			-v "$(SRC):$(CONTAINER_SRC)" \
-			-e SONG_DIR="$(CONTAINER_SRC)" \
 			--rm \
 			"$(IMAGE)" \
 			"youtube-dl" "$(RUN_ARGS)"
@@ -32,7 +31,6 @@ ssh:
 	docker run -i -t \
 			--name "$(CONTAINER_NAME)" \
 			-v "$(SRC):$(CONTAINER_SRC)" \
-			-e SONG_DIR="$(CONTAINER_SRC)" \
 			--rm \
 			"$(IMAGE)" \
 			/bin/bash
