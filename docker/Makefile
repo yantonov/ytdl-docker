@@ -2,7 +2,7 @@ help:
 	@cat Makefile
 
 DOCKER_FILE=Dockerfile
-SRC?=$(shell pwd)
+SRC?=$(HOME)/Downloads
 CONTAINER_SRC=/root/ytdl
 
 IMAGE=yantonov/ytdl
