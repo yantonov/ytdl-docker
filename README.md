@@ -1,8 +1,8 @@
-Docker image for [ytdl](https://github.com/ytdl-org/youtube-dl).  
+Docker image for [yt-dlp](https://github.com/yt-dlp/yt-dlp/).  
 
 Youtube-dl version that's used inside docker image can be found [here](https://github.com/yantonov/ytdl/blob/master/docker/files/requirements.txt)  
 
-Latest version of youtube-dl library can be found [here](https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/version.py)
+Latest version of youtube-dl library can be found [here](https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/version.py)  
 
 Usage add this repository to PATH and use ytmdl script
 

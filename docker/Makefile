@@ -6,7 +6,7 @@ SRC?=$(HOME)/Downloads
 CONTAINER_SRC=/root/ytdl
 
 IMAGE=yantonov/ytdl
-CONTAINER_NAME?=$(shell echo "$(IMAGE)" | tr '/' '_')
+CONTAINER_NAME?=$(shell echo "$(IMAGE)_$(shell date +%s)" | tr '/' '_')
 
 ifeq (run, $(firstword $(MAKECMDGOALS)))
   RUN_ARGS := $(wordlist 2, $(words $(MAKECMDGOALS)), $(MAKECMDGOALS))
@@ -25,7 +25,7 @@ run:
 			-v "$(SRC):$(CONTAINER_SRC)" \
 			--rm \
 			"$(IMAGE)" \
-			"youtube-dl" "$(RUN_ARGS)"
+			"yt-dlp" "$(RUN_ARGS)"
 
 ssh:
 	docker run -i -t \
