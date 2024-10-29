@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM python:3.9-slim-buster
 
 MAINTAINER Yury Antonov <1390348+yantonov@users.noreply.github.com>
 
