@@ -27,7 +27,7 @@ run:
 			-v "$(SRC):$(CONTAINER_SRC)" \
 			--rm \
 			"$(IMAGE)" \
-			"yt-dlp" "$(RUN_ARGS)"
+			"yt-dlp" "-f bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b" "$(RUN_ARGS)"
 
 ssh:
 	$(EXECUTABLE) run -i -t \

@@ -10,7 +10,17 @@ RUN \
 ADD files/requirements.txt /
 RUN pip install -r /requirements.txt
 
-# RUN apt-get update && apt-get install -y git
+RUN apt update && apt install -y git curl p7zip
+RUN \
+    mkdir -p /opt && \
+    cd /opt/ && \
+    curl -L 'https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz' --output ffmpeg.tar.xz && \
+    7zr x ffmpeg.tar.xz && \
+    tar xf ffmpeg.tar && \
+    mv ffmpeg-master-latest-linux64-gpl ffmpeg
+
+ENV PATH=/opt/ffmpeg/bin:$PATH
+
 # RUN pip install git+https://github.com/ytdl-org/youtube-dl.git
 
 WORKDIR $APP_HOME
