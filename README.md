@@ -11,4 +11,6 @@ Usage add this repository to PATH and use ytmdl script
 ```
 
 Links:
-[The best Docker base image for your Python application (July 2019)](https://pythonspeed.com/articles/base-image-python-docker-images/)
+1. [The best Docker base image for your Python application (July 2019)](https://pythonspeed.com/articles/base-image-python-docker-images/)
+2. [docker hub python images](https://hub.docker.com/_/python)
+3. [Alpine, Slim, Bullseye, Bookworm, Noble — Differences in Docker Images Explained](https://medium.com/@faruk13/alpine-slim-bullseye-bookworm-noble-differences-in-docker-images-explained-d9aa6efa23ec)
